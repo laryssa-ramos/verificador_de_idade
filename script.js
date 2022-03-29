@@ -100,19 +100,25 @@ function verificar(){
     res.style.textAlign ='center'
 
     if(fsex[1].checked){
+
         artigo = 'uma'
         res.innerHTML = `É ${artigo} ${genero} ${faixaEtaria} com ${idade} anos de idade <br> <br>`
 
-        if (idade <= 1){
+        if (idade == 1){
             res.innerHTML = `É ${artigo} ${genero} ${faixaEtaria} com ${idade} ano de idade  <br> <br>` 
+        }else if(idade == 0){
+            res.innerHTML = `É ${artigo} ${genero} ${faixaEtaria} com menos de 1 ano de idade  <br> <br>` 
         }
     } else{
 
         artigo = 'um'
         res.innerHTML = `É ${artigo} ${genero} ${faixaEtaria} com ${idade} anos de idade  <br> <br>`
 
-        if (idade <= 1){
+        if (idade == 1){
             res.innerHTML = `É ${artigo} ${genero} ${faixaEtaria} com ${idade} ano de idade  <br> <br>` 
+
+        }else if(idade == 0){
+            res.innerHTML = `É ${artigo} ${genero} ${faixaEtaria} com menos de 1 ano de idade  <br> <br>` 
         }
 
     }
